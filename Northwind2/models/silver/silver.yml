@@ -31,6 +31,7 @@ sources:
             description: "The postalcode where the product is been shipped to"
           - name: shipCountry
             description: "The country the product is been shipped to"
+
       - name: sl_customer
         description: "The Customer table"
         columns:
@@ -50,6 +51,7 @@ sources:
           description: "Each customer postalcode "
         - name: country
           description: "The country where the customer lives"
+
       - name: sl_categories
         description: "The Categories table"
         columns:
@@ -57,6 +59,7 @@ sources:
           description: "The primary key for this table"
         - name: categoryName
           description: "The name of the product category"
+
       - name: sl_product
         description: "The product table"
         columns:
@@ -106,6 +109,7 @@ sources:
           description: "Employees Country"
         - name: reportsTo
           description: "A number Id that represent who each employee reports to"
+
       - name: sl_supplier
         description: "The supplier table"
         columns:
@@ -125,6 +129,7 @@ sources:
           description: "The company's postalcode"
         - name: country
           description: "The country where the company is located"
+
       - name: sl_shipper
         description: "The shipper table"
         columns: 
@@ -132,6 +137,7 @@ sources:
           description: "The primary key for this table"
         - name: companyName
           description: "The shipping ompany name "
+
       - name: sl_territory
         description: "The territory table"
         columns:
@@ -141,6 +147,7 @@ sources:
           description: "Description of the territory"
         - name: regionDescription
           description: "Description of the region"
+          
       - name: sl_ordersdetails
         description: "The ordersdetails table"
         columns: 

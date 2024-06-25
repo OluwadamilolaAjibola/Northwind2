@@ -37,6 +37,7 @@ sources:
             description: "The postalcode where the product is been shipped to"
           - name: shipCountry
             description: "The country the product is been shipped to"
+
       - name: Customer
         description: "The Customer table"
         columns:
@@ -62,6 +63,7 @@ sources:
           description: "The customer mobile contact"
         - name: fax
           description: "The customer fax number"
+
       - name: Categories
         description: "The Categories table"
         columns:
@@ -71,6 +73,7 @@ sources:
           description: "The name of the product category"
         - name: description
           description: "A detail description of each of the product category"
+
       - name: product
         description: "The product table"
         columns:
@@ -162,6 +165,7 @@ sources:
           description: "The company fax number"
         - name: homePage
           description: "A link to the company's homepage"
+
       - name: shipper
         description: "The shipper table"
         columns: 
@@ -171,6 +175,7 @@ sources:
           description: "The shipping ompany name "
         - name: phone
           description: "The shipping company mobile contact"
+
       - name: territory
         description: "The territory table"
         columns:
@@ -180,6 +185,7 @@ sources:
           description: "Description of the territory"
         - name: regionId
           description: "Region foreign key for the territory table"
+
       - name: region
         description: "The region table"
         columns: 
@@ -187,6 +193,7 @@ sources:
           description: "The primary key for this table"
         - name: regionDescription
           description: "Description for the region"
+          
       - name: ordersdetails
         description: "The ordersdetails table"
         columns: 

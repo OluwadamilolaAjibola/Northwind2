@@ -29,6 +29,7 @@ sources:
           description: "The month of the year orders were placed"
         - name: customers
           description: "The number of customer each cohort month has"
+          
       - name: gd_cohortren
         description: "Customer cohort and retention analysis table"
         columns:
@@ -40,6 +41,7 @@ sources:
           description: "The number of customer each cohort month has"
         - name: retention_rate
           description: "Retention rate for each cohort month"
+
       - name: gd_discontinuedproduct
         description: "The product discontinuation analysis"
         columns:
@@ -55,6 +57,7 @@ sources:
           description: "The level at which each product was reordered"
         - name: discontinued
           description: "The confirmation for the discontinued product"
+
       - name: gd_reorderlevel
         description: "The product reorderlevel analysis"
         columns:
