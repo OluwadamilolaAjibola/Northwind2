@@ -9,11 +9,70 @@ sources:
       - name: gd_customerretention
         description: "The customer retention analysis table"
         columns:
-          - name: orderId
-            description: "The primary key for this table"
           - name: customerId
-            description: "The customer foreign key for the table"
-          - name: employeeId
+            description: "The customer foreign key for this table"
+          - name: customername
+            description: "The customer name "
+          - name: transactiondate
+            description: "The orderdate for this table"
+          - name: transaction_number
+            description: "The number of times a particular customer has placed an order"
+          - name: firsttransactiondate
+            description: "The first time each customer placed order"
+
+      - name: gd_cohort
+        description: "Customer Cohort analysis table"
+        columns:
+        - name: cohort_month
+          description: "The customer cohort month"
+        - name: order_month
+          description: "The month of the year orders were placed"
+        - name: customers
+          description: "The number of customer each cohort month has"
+      - name: gd_cohortren
+        description: "Customer cohort and retention analysis table"
+        columns:
+        - name: cohort_month
+          description: "The customer cohort month"
+        - name: order_month
+          description: "The month of the year orders were placed"
+        - name: customers
+          description: "The number of customer each cohort month has"
+        - name: retention_rate
+          description: "Retention rate for each cohort month"
+      - name: gd_discontinuedproduct
+        description: "The product discontinuation analysis"
+        columns:
+        - name: productId
+          description: "The primary key for this table"
+        - name: productName
+          description: "The name for each product"
+        - name: categotyId
+          description: "The foreign key for category"
+        - name: categoryName
+          description: "The name for each category"
+        - name: reorderLevel
+          description: "The level at which each product was reordered"
+        - name: discontinued
+          description: "The confirmation for the discontinued product"
+      - name: gd_reorderlevel
+        description: "The product reorderlevel analysis"
+        columns:
+        - name: productId
+          description: "The primary key for this table"
+        - name: productName
+          description: "The name for each product"
+        - name: categotyId
+          description: "The foreign key for category"
+        - name: categoryName
+          description: "The name for each category"
+        - name: reorderLevel
+          description: "The level at which each product was reordered"
+        - name: discontinued
+          description: "The confirmation for the discontinued product"
+
+
+
       
            
     
