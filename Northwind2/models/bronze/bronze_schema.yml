@@ -1,0 +1,213 @@
+
+version: 2
+
+sources:
+  - name: Northwind2
+    database: Northwind
+    schema: public
+    tables:
+      - name: Orders
+        description: "The Orders table"
+        columns:
+          - name: orderId
+            description: "The primary key for this table"
+          - name: customerId
+            description: "The customer foreign key for the table"
+          - name: employeeId
+            description: "The employee foreign key for the table"
+          - name: orderDate
+            description: "The date when the order was made by the customer"
+          - name: requiredDate
+            description: "The required date for the order"
+          - name: shippedDate
+            description: "The date the ordered product was shipped out to the customer"
+          - name: shipVia
+            description: "The shipping company that was used to shipped out the ordered product"
+          - name: freight
+            description: "The cost of shipping the goods out to customers"
+          - name: shipName
+            description: "The name of the shipping company used"
+          - name: shipAddress
+            description: "The address of the shipping company"
+          - name: shipCity
+            description: "The city the product is been shipped to"
+          - name: shipRegion
+            description: "The region the product is been shipped to"
+          - name: shipPostalCode
+            description: "The postalcode where the product is been shipped to"
+          - name: shipCountry
+            description: "The country the product is been shipped to"
+      - name: Customer
+        description: "The Customer table"
+        columns:
+        - name: customerId
+          description: "The primary key for this table"
+        - name: companyName
+          description: "The company where each customer works"
+        - name: contactName
+          description: "The name of each customer"
+        - name: contactTitle
+          description: "Each of the customer job role or position"
+        - name: address
+          description: "The customer address"
+        - name: city
+          description: "The city where the customers lives"
+        - name: region
+          description: "The region where the customer lives "
+        - name: postalcode
+          description: "Each customer postalcode "
+        - name: country
+          description: "The country where the customer lives"
+        - name: phone
+          description: "The customer mobile contact"
+        - name: fax
+          description: "The customer fax number"
+      - name: Categories
+        description: "The Categories table"
+        columns:
+        - name: categoryId
+          description: "The primary key for this table"
+        - name: categoryName
+          description: "The name of the product category"
+        - name: description
+          description: "A detail description of each of the product category"
+      - name: product
+        description: "The product table"
+        columns:
+        - name: productId
+          description: "The primary key for this table"
+        - name: productName
+          description: "The product name for each product"
+        - name: supplierId
+          description: "Supplier foreign key for the product table"
+        - name: categoryId
+          description: "Category foreign key for the product table"
+        - name: quantityPerUnit
+          description: "Product quantity sold"
+        - name: unitPrice
+          description: "Price for each product"
+        - name: unitsInStock
+          description: "Total number of product in stock"
+        - name: unitsOnOrder
+          description: "Total number of product ordered"
+        - name: reorderLevel
+          description: "The number of time a product has been reordered"
+        - name: discontinued
+          description: "product that the production has been put on hold"
+
+      - name: Employees
+        description: "The Employees table"
+        columns:
+        - name: employeeId
+          description: "The primary key for this table"
+        - name: lastName
+          description: "Employees Lastname"
+        - name: firstName
+          description: "Employees Firstname"
+        - name: title
+          description: "Each employee job position"
+        - name: titleOfCourtesy
+          description: "Marital status of each employee"
+        - name: birthDate
+          description: "employees date of birth"
+        - name: hireDate
+          description: "Date each employee was hired"
+        - name: address
+          description: "Each employee Address"
+        - name:  city
+          description: "Employees City"
+        - name: region
+          description: "Employees Region"
+        - name: postalcode
+          description: "Employees Postalcode"
+        - name: country
+          description: "Employees Country"
+        - name: homePhone
+          description: "Employees home mobile contact"
+        - name: extension
+          description: "Employees extension"
+        - name: photo
+          description: "A photo link"
+        - name: notes
+          description: "A descriptive notes about each employee"
+        - name: reportsTo
+          description: "A number Id that represent who each employee reports to"
+        - name: photoPath
+          description: "A photo link to a folder"
+
+      - name: supplier
+        description: "The supplier table"
+        columns:
+        - name: supplierId
+          description: "The primary key for this table"
+        - name: companyName
+          description: "The supplier company name"
+        - name: contactName
+          description: "The name of the company contact person"
+        - name: contactitle
+          description: "The company contact person job position"
+        - name: address
+          description: "The company address"
+        - name:  city
+          description: "The city where the company is located"
+        - name: region
+          description: "The region where the company is located"
+        - name: postalcode
+          description: "The company's postalcode"
+        - name: country
+          description: "The country where the company is located"
+        - name: phone
+          description: "The company's mobile contact"
+        - name: fax
+          description: "The company fax number"
+        - name: homePage
+          description: "A link to the company's homepage"
+      - name: shipper
+        description: "The shipper table"
+        columns: 
+        - name: shipperId
+          description: "The primary key for this table"
+        - name: companyName
+          description: "The shipping ompany name "
+        - name: phone
+          description: "The shipping company mobile contact"
+      - name: territory
+        description: "The territory table"
+        columns:
+        - name: territoryId
+          description: "The primary key for this table"
+        - name: territoryDescription
+          description: "Description of the territory"
+        - name: regionId
+          description: "Region foreign key for the territory table"
+      - name: region
+        description: "The region table"
+        columns: 
+        - name: regionId
+          description: "The primary key for this table"
+        - name: regionDescription
+          description: "Description for the region"
+      - name: ordersdetails
+        description: "The ordersdetails table"
+        columns: 
+        - name: orderID
+          description: "The primary key for this table" 
+        - name: productID
+          description: "Product foreign key for the ordersdetails table"
+        - name: unitPrice
+          description: "Price for each product"
+        - name: quantity
+          description: "The quantity of product ordered by each customer"
+        - name: discount
+          description: "Discount price for each product"
+        - name: total sales
+          description: "Total amount made from the ordered product"
+ 
+           
+    
+        
+       
+
+
+
+  

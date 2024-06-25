@@ -1,0 +1,167 @@
+
+version: 2
+
+sources:
+  - name: Northwind2
+    database: Northwind
+    schema: public
+    tables:
+      - name: sl_orders
+        description: "The Orders table"
+        columns:
+          - name: orderId
+            description: "The primary key for this table"
+          - name: customerId
+            description: "The customer foreign key for the table"
+          - name: employeeId
+            description: "The employee foreign key for the table"
+          - name: orderDate
+            description: "The date when the order was made by the customer"
+          - name: requiredDate
+            description: "The required date for the order"
+          - name: shippedDate
+            description: "The date the ordered product was shipped out to the customer"
+          - name: days to ship orders
+            description: "Number of days it takes to ship out ordered product from the day the product was ordered"
+          - name: shipId
+            description: "The Id of the company that was used to shipped out the ordered product"
+          - name: shipCity
+            description: "The city the product is been shipped to"
+          - name: shipPostalCode
+            description: "The postalcode where the product is been shipped to"
+          - name: shipCountry
+            description: "The country the product is been shipped to"
+      - name: sl_customer
+        description: "The Customer table"
+        columns:
+        - name: customerId
+          description: "The primary key for this table"
+        - name: companyName
+          description: "The company where each customer works"
+        - name: customername
+          description: "The name of each customer"
+        - name: customer job position
+          description: "Each of the customer job role or position"
+        - name: address
+          description: "The customer address"
+        - name: city
+          description: "The city where the customers lives"
+        - name: postalcode
+          description: "Each customer postalcode "
+        - name: country
+          description: "The country where the customer lives"
+      - name: sl_categories
+        description: "The Categories table"
+        columns:
+        - name: categoryId
+          description: "The primary key for this table"
+        - name: categoryName
+          description: "The name of the product category"
+      - name: sl_product
+        description: "The product table"
+        columns:
+        - name: productId
+          description: "The primary key for this table"
+        - name: productName
+          description: "The product name for each product"
+        - name: supplierId
+          description: "Supplier foreign key for the product table"
+        - name: categoryId
+          description: "Category foreign key for the product table"
+        - name: quantityPerUnit
+          description: "Product quantity sold"
+        - name: unitPrice
+          description: "Price for each product"
+        - name: unitsInStock
+          description: "Total number of product in stock"
+        - name: unitsOnOrder
+          description: "Total number of product ordered"
+        - name: reorderLevel
+          description: "The number of time a product has been reordered"
+        - name: discontinued
+          description: "product that the production has been put on hold"
+
+      - name: sl_employees
+        description: "The Employees table"
+        columns:
+        - name: employeeId
+          description: "The primary key for this table"
+        - name: lastName
+          description: "Employees Lastname"
+        - name: firstName
+          description: "Employees Firstname"
+        - name: title
+          description: "Each employee job position"
+        - name: birthDate
+          description: "employees date of birth"
+        - name: hireDate
+          description: "Date each employee was hired"
+        - name: address
+          description: "Each employee Address"
+        - name:  city
+          description: "Employees City"
+        - name: postalcode
+          description: "Employees Postalcode"
+        - name: country
+          description: "Employees Country"
+        - name: reportsTo
+          description: "A number Id that represent who each employee reports to"
+      - name: sl_supplier
+        description: "The supplier table"
+        columns:
+        - name: supplierId
+          description: "The primary key for this table"
+        - name: companyName
+          description: "The supplier company name"
+        - name: contactName
+          description: "The name of the company contact person"
+        - name: contactitle
+          description: "The company contact person job position"
+        - name: address
+          description: "The company address"
+        - name:  city
+          description: "The city where the company is located"
+        - name: postalcode
+          description: "The company's postalcode"
+        - name: country
+          description: "The country where the company is located"
+      - name: sl_shipper
+        description: "The shipper table"
+        columns: 
+        - name: shipperId
+          description: "The primary key for this table"
+        - name: companyName
+          description: "The shipping ompany name "
+      - name: sl_territory
+        description: "The territory table"
+        columns:
+        - name: territoryId
+          description: "The primary key for this table"
+        - name: territoryDescription
+          description: "Description of the territory"
+        - name: regionDescription
+          description: "Description of the region"
+      - name: sl_ordersdetails
+        description: "The ordersdetails table"
+        columns: 
+        - name: orderID
+          description: "The primary key for this table" 
+        - name: productID
+          description: "Product foreign key for the ordersdetails table"
+        - name: unitPrice
+          description: "Price for each product"
+        - name: quantity
+          description: "The quantity of product ordered by each customer"
+        - name: discount
+          description: "Discount price for each product"
+        - name: total sales
+          description: "Total amount made from the ordered product"
+ 
+           
+    
+        
+       
+
+
+
+  

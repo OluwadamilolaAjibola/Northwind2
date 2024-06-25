@@ -1,0 +1,25 @@
+
+version: 2
+
+sources:
+  - name: Northwind2
+    database: Northwind
+    schema: public
+    tables:
+      - name: gd_customerretention
+        description: "The customer retention analysis table"
+        columns:
+          - name: orderId
+            description: "The primary key for this table"
+          - name: customerId
+            description: "The customer foreign key for the table"
+          - name: employeeId
+      
+           
+    
+        
+       
+
+
+
+  
