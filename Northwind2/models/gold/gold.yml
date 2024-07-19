@@ -72,6 +72,7 @@ sources:
           description: "The level at which each product was reordered"
         - name: discontinued
           description: "The confirmation for the discontinued product"
+
       - name: gd_preferred_shipping_method
         description: "The Preferred shipping company analysis"
         columns:
@@ -100,7 +101,7 @@ sources:
         - name: revenue
           description: " The total reveue made from each product"
         - name: totalnumbersoforders
-          description: "The total number of order for each product"
+          description: "The total number of orders for each products"
 
 
 
