@@ -6,7 +6,7 @@ sources:
     database: Northwind
     schema: public
     tables:
-      - name: gd_customerretention
+      - name: gd_customerRen
         description: "The customer retention analysis table"
         columns:
           - name: customerId
@@ -30,17 +30,16 @@ sources:
         - name: customers
           description: "The number of customer each cohort month has"
           
-      - name: gd_cohortren
-        description: "Customer cohort and retention analysis table"
+      - name: gd_employee_performance
+        description: "Employee Performance analysis table"
         columns:
-        - name: cohort_month
-          description: "The customer cohort month"
-        - name: order_month
-          description: "The month of the year orders were placed"
-        - name: customers
-          description: "The number of customer each cohort month has"
-        - name: retention_rate
-          description: "Retention rate for each cohort month"
+        - name: fullname
+          description: "The full name of the customer"
+        - name: totalorder
+          description: "The total order made by each employee"
+        - name: revenue
+          description: "The total revenue made by each employee"
+        
 
       - name: gd_discontinuedproduct
         description: "The product discontinuation analysis"
@@ -73,6 +72,39 @@ sources:
           description: "The level at which each product was reordered"
         - name: discontinued
           description: "The confirmation for the discontinued product"
+      - name: gd_preferred_shipping_method
+        description: "The Preferred shipping company analysis"
+        columns:
+        - name: shipping_method
+          description: "The name of the shipping company"
+        - name: totalnumberoforders
+          description: "The total number of orders each shipping company has shipped out"
+        - name: shipid
+          description: "The shipid"
+      
+      - name: gd_top_customer
+        description: "The table showing the top Customer"
+        columns:
+        - name: customername
+          description: "The name of the Customers"
+        - name: revenue
+          description: "The total revenue made from each Customer"
+        
+      - name: gd_topselling_product
+        description: "The table show the top selling product"
+        columns:
+        - name: products
+          description: "The name of the Products"
+        - name: totalquantitysold
+          description: "The total number of each product sold"
+        - name: revenue
+          description: " The total reveue made from each product"
+        - name: totalnumbersoforders
+          description: "The total number of order for each product"
+
+
+
+
 
 
 
